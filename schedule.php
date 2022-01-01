@@ -80,7 +80,6 @@ if (!(isset($_SESSION['id']))) {
                     <th>Id</th>
                     <th>Subject</th>
                     <th class="text-end">GUI 1</th>
-                    <th class="text-end">GUI 2</th>
                 </tr>
 
                 <?php $sno=0; while ($r = $results->fetch()) { $sno++; ?>
@@ -88,7 +87,6 @@ if (!(isset($_SESSION['id']))) {
                         <td><?php echo $sno; ?></td>
                         <td><?php echo $r['subject']; ?></td>
                         <td class="text-end"><a href="quiz.php?sub_id=<?php echo $r['subject']; ?>">Start</a></td>
-                        <td class="text-end"><a href="quiz2.php?sub_id=<?php echo $r['subject']; ?>">Start</a></td>
                     </tr>
                 <?php } ?>
             </table>
